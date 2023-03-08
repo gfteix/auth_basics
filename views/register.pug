@@ -5,7 +5,7 @@ block vars
 
 block body 
     h1 Create an Account 
-    form(method="POST")
+    form(method="POST", action="/register")
         span First Name: 
         input(type="test", name="firstName", required=true)
         span Last Name: 
@@ -15,5 +15,8 @@ block body
         span Password: 
         input(type="test", name="password", required=true)
         input(type="submit", value="submit")
+
+        if error
+            p ERROR: #{error}
 
 
